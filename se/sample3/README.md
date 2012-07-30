@@ -1,0 +1,24 @@
+sample3
+===============
+
+Use CASE(@Named's use):
+
+1 AutomatedTellerMachineImpl class uses setter method to inject bean which implements the ATMTransport interface
+2 classes that implement the ATMTransport interface have four classes:
+
+1)JsonRestAtmTransport
+2)SoapAtmTransport
+3)StandardAtmTransport
+4)SuperFastAtmTransport
+
+By default, the aboved classes are all maked @Default
+
+3 mark JsonRestAtmTransport,  SoapAtmTransport, SuperFastAtmTransport as @Alternative, and StandardAtmTransport as @Default
+
+3 AutomatedTellerMachineImpl class is marked @Named and is not provided a name, then  the name is the name of the class with the first letter lower case.
+So, for AutomatedTellerMachineImpl, the name should be "automatedTellerMachineImpl".
+
+4 when running AtmMain class,  the following output appears,
+
+deposit called
+communicating with bank via Standard transport retries
