@@ -15,10 +15,10 @@ By default, the aboved classes are all maked @Default
 
 3 mark JsonRestAtmTransport,  SoapAtmTransport, SuperFastAtmTransport as @Alternative, and StandardAtmTransport as @Default
 
-3 AutomatedTellerMachineImpl class is marked @Named and is not provided a name, then  the name is the name of the class with the first letter lower case.
+4 AutomatedTellerMachineImpl class is marked @Named and is not provided a name, then  the name is the name of the class with the first letter lower case.
 So, for AutomatedTellerMachineImpl, the name should be "automatedTellerMachineImpl".
 
-4 when running AtmMain class,  the following output appears,
+5 when running AtmMain class,  the following output appears,
 
 deposit called
 communicating with bank via Standard transport retries
