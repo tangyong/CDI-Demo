@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cdi-demo.se</groupId>
+    <artifactId>parent-pom</artifactId>
+    <packaging>pom</packaging>
+    <name>CDI DEMO SE PARENT POM</name>
+    <version>1.0-SNAPSHOT</version>
+
+    <description>
+        Source code for CDI DI tutorial. 
+	See: http://code.google.com/p/jee6-cdi/wiki/DependencyInjectionAnIntroductoryTutorial
+   </description>
+
+    <repositories>
+        <repository>
+            <id>cdi.advocate</id>
+            <name>CDI Advocacy</name>
+            <url>http://jee6-cdi.googlecode.com/svn/m2/repository/</url>
+        </repository>   
+        <repository>
+            <id>jboss.maven.repo</id>
+            <name>JBoss Repository</name>
+            <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </repository>  
+    </repositories>
+        <dependencyManagement>
+        <dependencies>
+             <dependency>
+               <groupId>org.cdiadvocate</groupId>
+               <artifactId>cdiadvocate-api</artifactId>
+               <version>1.0-SNAPSHOT</version>
+             </dependency>
+             <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>1.0.0.GA</version>
+             </dependency>     
+	         <dependency> 
+	            <groupId>org.cdiadvocate</groupId> 
+	            <artifactId>cdiadvocate-weld-impl</artifactId> 
+               <version>1.0-SNAPSHOT</version> 
+	          </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <modules>
+        <module>sample1</module>
+        <module>sample2</module>
+    </modules>
+
+</project>
