@@ -52,6 +52,7 @@
         <module>sample5</module>
         <module>sample6</module>
         <module>sample7</module>
+        <module>sample8</module>
     </modules>
 
 </project>
